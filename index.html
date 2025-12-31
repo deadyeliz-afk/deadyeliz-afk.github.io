@@ -2,27 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Feliz Año Nuevo</title>
+    <title>Feliz Año Nuevo Ani</title>
 
-    <!-- Fuente bonita desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Fuentes bonitas -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
 
     <style>
         body {
-            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            background-color: #b11226;
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            margin-top: 50px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
         }
 
         h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 60px;
-            color: #d35400;
+            font-family: 'Great Vibes', cursive;
+            font-size: 70px;
+            margin-top: 50px;
         }
 
         .codigo-texto {
-            font-size: 20px;
+            font-size: 22px;
             margin-top: 40px;
         }
 
@@ -31,35 +34,69 @@
         }
 
         .inputs input {
-            width: 40px;
-            height: 50px;
-            font-size: 24px;
+            width: 45px;
+            height: 55px;
+            font-size: 26px;
             text-align: center;
             margin: 5px;
+            border-radius: 8px;
+            border: none;
         }
 
         button {
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
+            border: none;
+            border-radius: 20px;
             cursor: pointer;
         }
 
         #resultado {
-            margin-top: 25px;
+            margin-top: 20px;
             font-size: 20px;
-            font-weight: bold;
+            color: #ffdcdc;
         }
 
         #secreto {
             display: none;
-            margin-top: 30px;
-            font-size: 22px;
-            color: #27ae60;
+            max-width: 800px;
+            margin: 40px auto;
+            font-size: 20px;
+            line-height: 1.8;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Imágenes en esquinas */
+        .corner {
+            position: fixed;
+            width: 120px;
+        }
+
+        .top-left { top: 10px; left: 10px; }
+        .top-right { top: 10px; right: 10px; }
+        .bottom-left { bottom: 10px; left: 10px; }
+        .bottom-right { bottom: 10px; right: 10px; }
+
+        /* Imágenes finales */
+        .imagenes-finales {
+            margin: 40px 0;
+        }
+
+        .imagenes-finales img {
+            width: 180px;
+            margin: 10px;
+            border-radius: 15px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Imágenes esquinas -->
+    <img src="Pictures/Snoopy.jpg" class="corner top-left">
+    <img src="Pictures/Stitch.jpg" class="corner top-right">
+    <img src="Pictures/Chimuelo.png" class="corner bottom-left">
+    <img src="Pictures/Tulipanes.png" class="corner bottom-right">
 
     <h1>Feliz Año nuevo Ani</h1>
 
@@ -78,28 +115,41 @@
     <div id="resultado"></div>
 
     <div id="secreto">
-        🎉 ¡Código correcto!... Hola Ani si estas viendo esto quiero que sepas que te felicito mucho queria que sepas lo importante que fuiste para mi este año y pues aun que no termino de la mejor manera queira igualmente hacerlo para que sepas lo mucho que significaste para mi. Te quiero mucho y te deseo un exelente año. con cariño Gabo
+        ¡Código correcto!...<br><br>
+        Hola Ani, si estás viendo esto quiero que sepas que te felicito mucho.
+        Quería que sepas lo importante que fuiste para mí este año y pues,
+        aunque no terminó de la mejor manera, igualmente quería hacerlo para
+        que sepas lo mucho que significaste para mí,
+        sinceramente se que esto debe ser inesperado o un poco raro
+        pero no importa, por que me arme de valor
+        para que puedas ver esto, quiero que te sirva para recordar 
+        QUE NO FUE TAN MALO la pasamos bien entre risas y pues recuerda
+        que siempre hay gente que te quiere
+        aveces siento que lo que hago aveces no tiene sentido
+        pero eso que importa si asi puedo sacarte una sonrisa
+        ASI QUE FELIZ AÑOOO.<br><br>
+        Te quiero mucho espero que cumplas muchas de tus metas.<br><br>
+        Con cariño,<br>
+        Gabo 
+    </div>
+
+    <!-- Imágenes finales -->
+    <div class="imagenes-finales">
+        <img src="Pictures/Tarde.jpg">
+        <img src="Pictures/Bugambilia.webp">
     </div>
 
     <script>
         function verificarCodigo() {
             const codigo =
-                document.getElementById("c1").value +
-                document.getElementById("c2").value +
-                document.getElementById("c3").value +
-                document.getElementById("c4").value +
-                document.getElementById("c5").value;
-
-            const resultado = document.getElementById("resultado");
-            const secreto = document.getElementById("secreto");
+                c1.value + c2.value + c3.value + c4.value + c5.value;
 
             if (codigo === "14643") {
-                secreto.style.display = "block";
-                resultado.textContent = "";
+                document.getElementById("secreto").style.display = "block";
+                document.getElementById("resultado").textContent = "";
             } else {
-                secreto.style.display = "none";
-                resultado.textContent = "Código incorrecto";
-                resultado.style.color = "red";
+                document.getElementById("secreto").style.display = "none";
+                document.getElementById("resultado").textContent = "Código incorrecto";
             }
         }
     </script>
