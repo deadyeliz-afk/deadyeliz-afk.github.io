@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz Año Nuevo</title>
+
+    <!-- Fuente bonita desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 60px;
+            color: #d35400;
+        }
+
+        .codigo-texto {
+            font-size: 20px;
+            margin-top: 40px;
+        }
+
+        .inputs {
+            margin-top: 15px;
+        }
+
+        .inputs input {
+            width: 40px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #secreto {
+            display: none;
+            margin-top: 30px;
+            font-size: 22px;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz Año nuevo Ani</h1>
+
+    <div class="codigo-texto">Insertar código</div>
+
+    <div class="inputs">
+        <input type="text" maxlength="1" id="c1">
+        <input type="text" maxlength="1" id="c2">
+        <input type="text" maxlength="1" id="c3">
+        <input type="text" maxlength="1" id="c4">
+        <input type="text" maxlength="1" id="c5">
+    </div>
+
+    <button onclick="verificarCodigo()">Verificar</button>
+
+    <div id="resultado"></div>
+
+    <div id="secreto">
+        🎉 ¡Código correcto!... Hola Ani si estas viendo esto quiero que sepas que te felicito mucho queria que sepas lo importante que fuiste para mi este año y pues aun que no termino de la mejor manera queira igualmente hacerlo para que sepas lo mucho que significaste para mi. Te quiero mucho y te deseo un exelente año. con cariño Gabo
+    </div>
+
+    <script>
+        function verificarCodigo() {
+            const codigo =
+                document.getElementById("c1").value +
+                document.getElementById("c2").value +
+                document.getElementById("c3").value +
+                document.getElementById("c4").value +
+                document.getElementById("c5").value;
+
+            const resultado = document.getElementById("resultado");
+            const secreto = document.getElementById("secreto");
+
+            if (codigo === "14643") {
+                secreto.style.display = "block";
+                resultado.textContent = "";
+            } else {
+                secreto.style.display = "none";
+                resultado.textContent = "Código incorrecto";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
